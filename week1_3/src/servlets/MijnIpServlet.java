@@ -33,7 +33,7 @@ public class MijnIpServlet extends HttpServlet
       "<html>\n" +
       "   <head>\n" +
       "       <title>\n" +
-      "          Eerste Servlet page\n" +
+      "          MijnIp page\n" +
       "       </title>\n" +
       "   </head>\n" +
       "   <body bgcolor=\"#8AAFED\">\n" +
