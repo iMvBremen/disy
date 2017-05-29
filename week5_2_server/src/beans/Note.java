@@ -49,7 +49,7 @@ public class Note {
 			qb = new QueryBean();
 		}
 		
-		qb.setQuery("INSERT INTO Notes VALUES ($nextid, '"+time+"', '"+text+")");
+		qb.setQuery("INSERT INTO notes VALUES ($nextid, '"+time+"', '"+text+")");
 		
 		return qb.getUpdatedRows() > 0;	
 	}
@@ -59,7 +59,7 @@ public class Note {
 			qb = new QueryBean();
 		}
 		
-		qb.setQuery("DELETE FROM Notes WHERE id='"+id+"'");
+		qb.setQuery("DELETE FROM notes WHERE id='"+id+"'");
 		
 		return qb.getUpdatedRows() > 0;	
 	}

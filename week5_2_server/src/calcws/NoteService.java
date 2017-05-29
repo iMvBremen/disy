@@ -16,6 +16,8 @@ import javax.jws.WebParam;
 public class NoteService {
     
 	public boolean addNote(@WebParam(name="text") String text) {
+		System.out.println("add: " + text);
+		
 		final Note note = new Note();
 		note.setText(text);
 		if (note.isValid()) {
@@ -27,6 +29,8 @@ public class NoteService {
 	}
 	
 	public boolean removeNote(@WebParam(name="id") int id) {
+		System.out.println("remove: " + id);
+		
 		final Note note = new Note();
 		note.setId(id);
 		return note.delete();
@@ -36,7 +40,7 @@ public class NoteService {
 		final List<Note> notes = new ArrayList<Note>();
 		
 		final QueryBean qb = new QueryBean();
-		qb.setQuery("SELECT * FROM Notes");
+		qb.setQuery("SELECT * FROM notes");
 		for (String[] result : qb.getResultTable()) {
 			final Note note = new Note();
 			note.setId(Integer.parseInt(result[0]));
