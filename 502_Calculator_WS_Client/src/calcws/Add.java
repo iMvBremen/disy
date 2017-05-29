@@ -16,8 +16,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="arg1" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="a" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="b" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -28,44 +28,44 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "add", propOrder = {
-    "arg0",
-    "arg1"
+    "a",
+    "b"
 })
 public class Add {
 
-    protected int arg0;
-    protected int arg1;
+    protected int a;
+    protected int b;
 
     /**
-     * Gets the value of the arg0 property.
+     * Gets the value of the a property.
      * 
      */
-    public int getArg0() {
-        return arg0;
+    public int getA() {
+        return a;
     }
 
     /**
-     * Sets the value of the arg0 property.
+     * Sets the value of the a property.
      * 
      */
-    public void setArg0(int value) {
-        this.arg0 = value;
+    public void setA(int value) {
+        this.a = value;
     }
 
     /**
-     * Gets the value of the arg1 property.
+     * Gets the value of the b property.
      * 
      */
-    public int getArg1() {
-        return arg1;
+    public int getB() {
+        return b;
     }
 
     /**
-     * Sets the value of the arg1 property.
+     * Sets the value of the b property.
      * 
      */
-    public void setArg1(int value) {
-        this.arg1 = value;
+    public void setB(int value) {
+        this.b = value;
     }
 
 }
