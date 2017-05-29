@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://calcws/" xmlns:tns="http://calcws/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="addNote" type="tns:addNote"/>
+
+  <xs:element name="addNoteResponse" type="tns:addNoteResponse"/>
+
+  <xs:element name="getNotes" type="tns:getNotes"/>
+
+  <xs:element name="getNotesResponse" type="tns:getNotesResponse"/>
+
+  <xs:element name="removeNote" type="tns:removeNote"/>
+
+  <xs:element name="removeNoteResponse" type="tns:removeNoteResponse"/>
+
+  <xs:complexType name="getNotes">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getNotesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:note" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="note">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element name="text" type="xs:string" minOccurs="0"/>
+      <xs:element name="time" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addNote">
+    <xs:sequence>
+      <xs:element name="text" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addNoteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="removeNote">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="removeNoteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
